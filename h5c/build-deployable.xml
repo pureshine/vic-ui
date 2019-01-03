@@ -35,8 +35,6 @@
    <!-- Build Flex project -->
    <target name="compile-flex-project">
       <echo>Building Flex plugin...</echo>
-      <ant antfile="${FLEX_PROJECT_UI_HOME}/build-flex.xml" dir="${FLEX_PROJECT_UI_HOME}"/>
-      <ant antfile="${FLEX_PROJECT_SERVICE_HOME}/build-java.xml" dir="${FLEX_PROJECT_SERVICE_HOME}"/>
       <copy file="${FLEX_PROJECT_UI_HOME}/war/target/vic-ui-war.war" tofile="${PLUGINS_DIR}/vic-ui-flex.war"/>
       <copy file="${FLEX_PROJECT_SERVICE_HOME}/target/vic-ui-service.jar" tofile="${PLUGINS_DIR}/vic-ui-service-flex.war"/>
    </target>
@@ -45,7 +43,6 @@
       <condition property="BUILD_MODE" value="prod" else="dev">
          <equals arg1="prod" arg2="${env.BUILD_MODE}" casesensitive="false"/>
       </condition>
-      <replaceregexp file="${basedir}/vic/src/main/webapp/plugin.xml" match="(\/vsphere-client\/vic\/resources\/)(build\-dev|dist)" replace="\1dist" byline="true"/>
       <echo>Build mode is ${BUILD_MODE}</echo>
    </target>
 

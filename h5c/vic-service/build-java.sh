@@ -28,6 +28,5 @@ then
    exit 1
 fi
 
-"${ANT_HOME}"/bin/ant -f build-java.xml
 
 exit 0

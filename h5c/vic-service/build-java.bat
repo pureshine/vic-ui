@@ -30,6 +30,5 @@ REM --- (if Ant runs out of memory try defining ANT_OPTS=-Xmx512M)
    goto end
 )
 
-@call "%ANT_HOME%\bin\ant" -f build-java.xml
 
 :end

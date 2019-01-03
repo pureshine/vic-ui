@@ -12,11 +12,6 @@
       <servlet-name>springServlet</servlet-name>
       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 
-      <init-param>
-         <param-name>contextConfigLocation</param-name>
-         <param-value>/WEB-INF/spring/bundle-context.xml</param-value>
-      </init-param>
-
        <!-- The application context needs to be OSGI-enabled in order to look up services -->
       <init-param>
          <param-name>contextClass</param-name>
